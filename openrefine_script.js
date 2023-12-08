@@ -256,7 +256,7 @@
     "onError": "set-to-blank",
     "newColumnName": "05: 264 production",
     "columnInsertIndex": 11,
-    "description": "Create column 05: 264 production at index 11 based on column year using expression grel:\"Cambridge, Mass.:\" + \"$$b Harvard University Graduate School of Design,\" + \"$$c\" + \n(if (value == 1900, \"[date of publication not identified]\", value))"
+    "description": "Create column 05: 264 production at index 11 based on column year using expression grel:\"Cambridge, Mass.:\" + \"$$b Harvard University Graduate School of Design,\" + \"$$c\" + \n(if (value == 1900, \"[date of production not identified]\", value))"
   },
   {
     "op": "core/column-move",
