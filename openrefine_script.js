@@ -728,5 +728,18 @@
     "columnName": "04: 245a Lecture title",
     "index": 54,
     "description": "Move column 04: 245a Lecture title to position 54"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "baseColumnName": "DESCRIPTION",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "13: 500 note",
+    "columnInsertIndex": 51,
+    "description": "Create column 13: 500 note at index 51 based on column DESCRIPTION using expression grel:value"
   }
 ]
