@@ -299,7 +299,7 @@
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Text transform on cells in column 04: 245a Lecture title using expression grel:value + \".\""
+    "description": "Text transform on cells in column 04: 245a Lecture title using expression grel:value + \" :\""
   },
   {
     "op": "core/column-addition",
