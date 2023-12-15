@@ -308,7 +308,7 @@
       "mode": "row-based"
     },
     "baseColumnName": "Date (mm/dd/yyyy)",
-    "expression": "grel:\"Recorded in Cambridge, Massachusetts on \" + value.toString(\"d MMMM yyyy\") + \".\"",
+    "expression": "grel:\"Recorded in Cambridge, Massachusetts on \" + value.toString(\"MMMM d, yyyy\") + \".\"",
     "onError": "set-to-blank",
     "newColumnName": "07: 518 note",
     "columnInsertIndex": 13,
