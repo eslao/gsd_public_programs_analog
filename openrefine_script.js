@@ -741,5 +741,18 @@
     "newColumnName": "13: 500 note",
     "columnInsertIndex": 51,
     "description": "Create column 13: 500 note at index 51 based on column DESCRIPTION using expression grel:value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "baseColumnName": "Event Name",
+    "expression": "grel:value + \", \" + cells[\"Date (mm/dd/yyyy)\"].value.toString(\"MMMM d, YYYY\") + \".\"",
+    "onError": "set-to-blank",
+    "newColumnName": "13: 245b",
+    "columnInsertIndex": 49,
+    "description": "Create column 13: 245b at index 49 based on column Event Name using expression grel:value + \", \" + cells[\"Date (mm/dd/yyyy)\"].value.toString(\"MMMM d, YYYY\") + \".\""
   }
 ]
