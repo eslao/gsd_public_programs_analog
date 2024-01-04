@@ -819,5 +819,31 @@
     "repeat": false,
     "repeatCount": 10,
     "description": "Text transform on cells in column 04: 245a Lecture title 1 using expression grel:value\n.replace(', Tape', '. Tape').replace('. Tape', '. $$nTape')\n.replace(', Session', '. Session').replace('. Session', '. $$nSession')\n.replace(', Part', '. Part').replace('. Part', '. $$nPart')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "04: 245a Lecture title 0",
+    "expression": "grel:if(value.contains(/([0-9], [12][09][0-9])\\w+/), value, value + ' ' + cells['Date (mm/dd/yyyy)'].value.toString(\"MMMM d, yyyy\") + '.')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 04: 245a Lecture title 0 using expression grel:if(value.contains(/([0-9], [12][09][0-9])\\w+/), value, value + ' ' + cells['Date (mm/dd/yyyy)'].value.toString(\"MMMM d, yyyy\") + '.')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "04: 245a Lecture title 1",
+    "expression": "grel:if(value.contains(/([0-9], [12][09][0-9])\\w+/), value, value + ' ' + cells['Date (mm/dd/yyyy)'].value.toString(\"MMMM d, yyyy\") + '.')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 04: 245a Lecture title 1 using expression grel:if(value.contains(/([0-9], [12][09][0-9])\\w+/), value, value + ' ' + cells['Date (mm/dd/yyyy)'].value.toString(\"MMMM d, yyyy\") + '.')"
   }
 ]
