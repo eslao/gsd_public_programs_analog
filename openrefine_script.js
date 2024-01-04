@@ -845,5 +845,18 @@
     "repeat": false,
     "repeatCount": 10,
     "description": "Text transform on cells in column 04: 245a Lecture title 1 using expression grel:if(value.contains(/([0-9], [12][09][0-9])\\w+/), value, value + ' ' + cells['Date (mm/dd/yyyy)'].value.toString(\"MMMM d, yyyy\") + '.')"
+  ,
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "baseColumnName": "12: 700 speaker",
+    "expression": "grel:'Harvard University. $$b Graduate School of Design. $$b Library. $$t GSD Public Programs.'",
+    "onError": "set-to-blank",
+    "newColumnName": "13: 810 series/corporate name",
+    "columnInsertIndex": 12,
+    "description": "Create column 13: 810 series/corporate name at index 12 based on column 12: 700 speaker using expression grel:'Harvard University. $$b Graduate School of Design. $$b Library. $$t GSD Public Programs.'"
   }
 ]
