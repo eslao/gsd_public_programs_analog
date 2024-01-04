@@ -256,7 +256,7 @@
     "onError": "set-to-blank",
     "newColumnName": "05: 264 production",
     "columnInsertIndex": 11,
-    "description": "Create column 05: 264 production at index 11 based on column year using expression grel:\"Cambridge, Mass.:\" + \"$$b Harvard University Graduate School of Design,\" + \"$$c\" + \n(if (value == 1900, \"[date of production not identified]\", value))"
+    "description": "Create column 05: 264 production at index 11 based on column year using expression grel:\"Cambridge, Mass.:\" + \"$$b Harvard University Graduate School of Design,\" + \"$$c\" + \n(if (value == 1900, \"[date of publication not identified]\", value))"
   },
   {
     "op": "core/column-move",
@@ -299,7 +299,7 @@
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Text transform on cells in column 04: 245a Lecture title using expression grel:value + \" :\""
+    "description": "Text transform on cells in column 04: 245a Lecture title using expression grel:value + \".\""
   },
   {
     "op": "core/column-addition",
@@ -312,7 +312,7 @@
     "onError": "set-to-blank",
     "newColumnName": "07: 518 note",
     "columnInsertIndex": 13,
-    "description": "Create column 07: 518 note at index 13 based on column Date (mm/dd/yyyy) using expression grel:\"Recorded in Cambridge, Massachusetts on \" + value.toString(\"d MMMM yyyy\") + \".\""
+    "description": "Create column 07: 518 note at index 13 based on column Date (mm/dd/yyyy) using expression grel:\"Recorded in Cambridge, Massachusetts on \" + value.toString(\"MMMM d, yyyy\") + \".\""
   },
   {
     "op": "core/column-move",
@@ -845,7 +845,20 @@
     "repeat": false,
     "repeatCount": 10,
     "description": "Text transform on cells in column 04: 245a Lecture title 1 using expression grel:if(value.contains(/([0-9], [12][09][0-9])\\w+/), value, value + ' ' + cells['Date (mm/dd/yyyy)'].value.toString(\"MMMM d, yyyy\") + '.')"
-  ,
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "05: 264 production",
+    "expression": "grel:value.replace('[date of publication not identified]', '[date of production not identified]')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 05: 264 production using expression grel:value.replace('[date of publication not identified]', '[date of production not identified]')"
+  },
   {
     "op": "core/column-addition",
     "engineConfig": {
@@ -858,6 +871,99 @@
     "newColumnName": "13: 810 series/corporate name",
     "columnInsertIndex": 12,
     "description": "Create column 13: 810 series/corporate name at index 12 based on column 12: 700 speaker using expression grel:'Harvard University. $$b Graduate School of Design. $$b Library. $$t GSD Public Programs.'"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "baseColumnName": "Master Format",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "Master Format for 300",
+    "columnInsertIndex": 23,
+    "description": "Create column Master Format for 300 at index 23 based on column Master Format using expression grel:value"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Master Format",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "DVD (only copy)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DVD"
+      }
+    ],
+    "description": "Mass edit cells in column Master Format"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Master Format",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "VHS "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "VHS"
+      }
+    ],
+    "description": "Mass edit cells in column Master Format"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Master Format",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "mini-DV"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "miniDV"
+      }
+    ],
+    "description": "Mass edit cells in column Master Format"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Master Format",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "MiniDV"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "miniDV"
+      }
+    ],
+    "description": "Mass edit cells in column Master Format"
   },
   {
     "op": "core/text-transform",
