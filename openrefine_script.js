@@ -793,5 +793,31 @@
     "repeat": false,
     "repeatCount": 10,
     "description": "Text transform on cells in column 12: 700 speaker using expression grel:value .replace(' $$4', '$$4') .replace('$$4http://id.loc.gov/vocabulary/relators/spk', ', $$espeaker. $$4http://id.loc.gov/vocabulary/relators/spk') .replace('$$4http://id.loc.gov/vocabulary/relators/pan', ', $$epanelist. $$4http://id.loc.gov/vocabulary/relators/pan') .replace('$$4http://id.loc.gov/vocabulary/relators/mod', ', $$emoderator. $$4http://id.loc.gov/vocabulary/relators/mod')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "04: 245a Lecture title 0",
+    "expression": "grel:value\n.replace(', Tape', '. Tape').replace('. Tape', '. $$nTape')\n.replace(', Session', '. Session').replace('. Session', '. $$nSession')\n.replace(', Part', '. Part').replace('. Part', '. $$nPart')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 04: 245a Lecture title 0 using expression grel:value\n.replace(', Tape', '. Tape').replace('. Tape', '. $$nTape')\n.replace(', Session', '. Session').replace('. Session', '. $$nSession')\n.replace(', Part', '. Part').replace('. Part', '. $$nPart')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "04: 245a Lecture title 1",
+    "expression": "grel:value\n.replace(', Tape', '. Tape').replace('. Tape', '. $$nTape')\n.replace(', Session', '. Session').replace('. Session', '. $$nSession')\n.replace(', Part', '. Part').replace('. Part', '. $$nPart')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 04: 245a Lecture title 1 using expression grel:value\n.replace(', Tape', '. Tape').replace('. Tape', '. $$nTape')\n.replace(', Session', '. Session').replace('. Session', '. $$nSession')\n.replace(', Part', '. Part').replace('. Part', '. $$nPart')"
   }
 ]
