@@ -754,5 +754,44 @@
     "newColumnName": "13: 245b",
     "columnInsertIndex": 49,
     "description": "Create column 13: 245b at index 49 based on column Event Name using expression grel:value + \", \" + cells[\"Date (mm/dd/yyyy)\"].value.toString(\"MMMM d, YYYY\") + \".\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "01: 100 Lecturer",
+    "expression": "grel:value .replace(' $$4', '$$4') .replace('$$4http://id.loc.gov/vocabulary/relators/spk', ', $$espeaker. $$4http://id.loc.gov/vocabulary/relators/spk') .replace('$$4http://id.loc.gov/vocabulary/relators/pan', ', $$epanelist. $$4http://id.loc.gov/vocabulary/relators/pan') .replace('$$4http://id.loc.gov/vocabulary/relators/mod', ', $$emoderator. $$4http://id.loc.gov/vocabulary/relators/mod')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 01: 100 Lecturer using expression grel:value .replace(' $$4', '$$4') .replace('$$4http://id.loc.gov/vocabulary/relators/spk', ', $$espeaker. $$4http://id.loc.gov/vocabulary/relators/spk') .replace('$$4http://id.loc.gov/vocabulary/relators/pan', ', $$epanelist. $$4http://id.loc.gov/vocabulary/relators/pan') .replace('$$4http://id.loc.gov/vocabulary/relators/mod', ', $$emoderator. $$4http://id.loc.gov/vocabulary/relators/mod')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "11: 700 speaker",
+    "expression": "grel:value .replace(' $$4', '$$4') .replace('$$4http://id.loc.gov/vocabulary/relators/spk', ', $$espeaker. $$4http://id.loc.gov/vocabulary/relators/spk') .replace('$$4http://id.loc.gov/vocabulary/relators/pan', ', $$epanelist. $$4http://id.loc.gov/vocabulary/relators/pan') .replace('$$4http://id.loc.gov/vocabulary/relators/mod', ', $$emoderator. $$4http://id.loc.gov/vocabulary/relators/mod')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 11: 700 speaker using expression grel:value .replace(' $$4', '$$4') .replace('$$4http://id.loc.gov/vocabulary/relators/spk', ', $$espeaker. $$4http://id.loc.gov/vocabulary/relators/spk') .replace('$$4http://id.loc.gov/vocabulary/relators/pan', ', $$epanelist. $$4http://id.loc.gov/vocabulary/relators/pan') .replace('$$4http://id.loc.gov/vocabulary/relators/mod', ', $$emoderator. $$4http://id.loc.gov/vocabulary/relators/mod')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "12: 700 speaker",
+    "expression": "grel:value .replace(' $$4', '$$4') .replace('$$4http://id.loc.gov/vocabulary/relators/spk', ', $$espeaker. $$4http://id.loc.gov/vocabulary/relators/spk') .replace('$$4http://id.loc.gov/vocabulary/relators/pan', ', $$epanelist. $$4http://id.loc.gov/vocabulary/relators/pan') .replace('$$4http://id.loc.gov/vocabulary/relators/mod', ', $$emoderator. $$4http://id.loc.gov/vocabulary/relators/mod')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 12: 700 speaker using expression grel:value .replace(' $$4', '$$4') .replace('$$4http://id.loc.gov/vocabulary/relators/spk', ', $$espeaker. $$4http://id.loc.gov/vocabulary/relators/spk') .replace('$$4http://id.loc.gov/vocabulary/relators/pan', ', $$epanelist. $$4http://id.loc.gov/vocabulary/relators/pan') .replace('$$4http://id.loc.gov/vocabulary/relators/mod', ', $$emoderator. $$4http://id.loc.gov/vocabulary/relators/mod')"
   }
 ]
