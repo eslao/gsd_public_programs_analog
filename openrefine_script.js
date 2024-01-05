@@ -977,5 +977,36 @@
     "repeat": false,
     "repeatCount": 10,
     "description": "Text transform on cells in column 06: 300 extent and physical details of copy using expression grel:if(value == null, \nif(\ncells['Master Format for 300'].value == 'VHS', '1 videocassette : $$bsound, color ; $$b1/2 in.', \nif(\ncells['Master Format for 300'].value == 'DVD', '1 videodisc : $$bsound, color ; $$b 4 3/4 in.', \nif(\ncells['Master Format for 300'].value == 'Hi-8', '1 videocassette : $$bsound, color ; $$b8 mm', \nif(\ncells['Master Format for 300'].value == 'miniDV', '1 videocassette : $$bsound, color ; $$b1/4 in.', \nif(\ncells['Master Format for 300'].value == 'DVCAM', '1 videocassette : $$bsound, color ; $$b1/4 in.', null)\n)))), \nvalue)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "baseColumnName": "HD Barcode Formatted",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "14: 977w HD Barcode",
+    "columnInsertIndex": 16,
+    "description": "Create column 14: 977w HD Barcode at index 16 based on column HD Barcode Formatted using expression grel:value"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "14: 977w HD Barcode",
+    "index": 15,
+    "description": "Move column 14: 977w HD Barcode to position 15"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "14: 977w HD Barcode",
+    "index": 14,
+    "description": "Move column 14: 977w HD Barcode to position 14"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "14: 977w HD Barcode",
+    "index": 13,
+    "description": "Move column 14: 977w HD Barcode to position 13"
   }
 ]
