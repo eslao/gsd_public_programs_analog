@@ -866,7 +866,7 @@
       "mode": "record-based"
     },
     "baseColumnName": "12: 700 speaker",
-    "expression": "grel:'Harvard University. $$b Graduate School of Design. $$b Library. $$t GSD Public Programs.'",
+    "expression": "grel:'Harvard University. $$b Graduate School of Design. $$t GSD Public Programs.'",
     "onError": "set-to-blank",
     "newColumnName": "13: 810 series/corporate name",
     "columnInsertIndex": 12,
