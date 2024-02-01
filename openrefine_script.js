@@ -870,7 +870,7 @@
     "onError": "set-to-blank",
     "newColumnName": "13: 810 series/corporate name",
     "columnInsertIndex": 12,
-    "description": "Create column 13: 810 series/corporate name at index 12 based on column 12: 700 speaker using expression grel:'Harvard University. $$b Graduate School of Design. $$b Library. $$t GSD Public Programs.'"
+    "description": "Create column 13: 810 series/corporate name at index 12 based on column 12: 700 speaker using expression grel:'Harvard University. $$b Graduate School of Design. $$t GSD Public Programs.'"
   },
   {
     "op": "core/column-addition",
@@ -1008,5 +1008,78 @@
     "columnName": "14: 977w HD Barcode",
     "index": 13,
     "description": "Move column 14: 977w HD Barcode to position 13"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Tape No. (MASTER)",
+    "expression": "grel:if(value != null, value, cells[\"Access Copy\"].value)",
+    "onError": "set-to-blank",
+    "newColumnName": "15: 988 Tape Number for 852$h",
+    "columnInsertIndex": 24,
+    "description": "Create column 15: 988 Tape Number for 852$h at index 24 based on column Tape No. (MASTER) using expression grel:if(value != null, value, cells[\"Access Copy\"].value)"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "15: 988 Tape Number for 852$h",
+    "index": 23,
+    "description": "Move column 15: 988 Tape Number for 852$h to position 23"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "15: 988 Tape Number for 852$h",
+    "index": 22,
+    "description": "Move column 15: 988 Tape Number for 852$h to position 22"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "15: 988 Tape Number for 852$h",
+    "index": 21,
+    "description": "Move column 15: 988 Tape Number for 852$h to position 21"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "15: 988 Tape Number for 852$h",
+    "index": 20,
+    "description": "Move column 15: 988 Tape Number for 852$h to position 20"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "15: 988 Tape Number for 852$h",
+    "index": 19,
+    "description": "Move column 15: 988 Tape Number for 852$h to position 19"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "15: 988 Tape Number for 852$h",
+    "index": 18,
+    "description": "Move column 15: 988 Tape Number for 852$h to position 18"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "15: 988 Tape Number for 852$h",
+    "index": 17,
+    "description": "Move column 15: 988 Tape Number for 852$h to position 17"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "15: 988 Tape Number for 852$h",
+    "index": 16,
+    "description": "Move column 15: 988 Tape Number for 852$h to position 16"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "15: 988 Tape Number for 852$h",
+    "index": 15,
+    "description": "Move column 15: 988 Tape Number for 852$h to position 15"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "15: 988 Tape Number for 852$h",
+    "index": 14,
+    "description": "Move column 15: 988 Tape Number for 852$h to position 14"
   }
 ]
