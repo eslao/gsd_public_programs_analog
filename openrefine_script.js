@@ -473,11 +473,11 @@
       "mode": "row-based"
     },
     "baseColumnName": "Copy Format",
-    "expression": "grel:if(\nvalue == 'VHS', '1 videocassette : $bsound, color ; $b1/2 in.',\nif(value == 'DVD', '1 videodisc : $bsound, color ; $b 4 3/4 in.', null))",
+    "expression": "grel:if(\nvalue == 'VHS', '1 videocassette : $bsound, color ; $c 1/2 in.',\nif(value == 'DVD', '1 videodisc : $bsound, color ; $c 4 3/4 in.', null))",
     "onError": "set-to-blank",
     "newColumnName": "06: 300 extent and physical details of copy",
     "columnInsertIndex": 21,
-    "description": "Create column 06: 300 extent and physical details of copy at index 21 based on column Copy Format using expression grel:if(\nvalue == 'VHS', '1 videocassette : $bsound, color ; $b1/2 in.',\nif(value == 'DVD', '1 videodisc : $bsound, color ; $b 4 3/4 in.', null))"
+    "description": "Create column 06: 300 extent and physical details of copy at index 21 based on column Copy Format using expression grel:if(\nvalue == 'VHS', '1 videocassette : $bsound, color ; $c 1/2 in.',\nif(value == 'DVD', '1 videodisc : $bsound, color ; $c 4 3/4 in.', null))"
   },
   {
     "op": "core/row-removal",
@@ -972,11 +972,11 @@
       "mode": "record-based"
     },
     "columnName": "06: 300 extent and physical details of copy",
-    "expression": "grel:if(value == null, \nif(\ncells['Master Format for 300'].value == 'VHS', '1 videocassette : $bsound, color ; $b1/2 in.', \nif(\ncells['Master Format for 300'].value == 'DVD', '1 videodisc : $bsound, color ; $b 4 3/4 in.', \nif(\ncells['Master Format for 300'].value == 'Hi-8', '1 videocassette : $bsound, color ; $b8 mm', \nif(\ncells['Master Format for 300'].value == 'miniDV', '1 videocassette : $bsound, color ; $b1/4 in.', \nif(\ncells['Master Format for 300'].value == 'DVCAM', '1 videocassette : $bsound, color ; $b1/4 in.', null)\n)))), \nvalue)",
+    "expression": "grel:if(value == null, \nif(\ncells['Master Format for 300'].value == 'VHS', '1 videocassette : $bsound, color ; $c 1/2 in.', \nif(\ncells['Master Format for 300'].value == 'DVD', '1 videodisc : $bsound, color ; $c 4 3/4 in.', \nif(\ncells['Master Format for 300'].value == 'Hi-8', '1 videocassette : $bsound, color ; $c 8 mm', \nif(\ncells['Master Format for 300'].value == 'miniDV', '1 videocassette : $bsound, color ; $c1/4 in.', \nif(\ncells['Master Format for 300'].value == 'DVCAM', '1 videocassette : $bsound, color ; $c 1/4 in.', null)\n)))), \nvalue)",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Text transform on cells in column 06: 300 extent and physical details of copy using expression grel:if(value == null, \nif(\ncells['Master Format for 300'].value == 'VHS', '1 videocassette : $bsound, color ; $b1/2 in.', \nif(\ncells['Master Format for 300'].value == 'DVD', '1 videodisc : $bsound, color ; $b 4 3/4 in.', \nif(\ncells['Master Format for 300'].value == 'Hi-8', '1 videocassette : $bsound, color ; $b8 mm', \nif(\ncells['Master Format for 300'].value == 'miniDV', '1 videocassette : $bsound, color ; $b1/4 in.', \nif(\ncells['Master Format for 300'].value == 'DVCAM', '1 videocassette : $bsound, color ; $b1/4 in.', null)\n)))), \nvalue)"
+    "description": "Text transform on cells in column 06: 300 extent and physical details of copy using expression grel:if(value == null, \nif(\ncells['Master Format for 300'].value == 'VHS', '1 videocassette : $bsound, color ; $c 1/2 in.', \nif(\ncells['Master Format for 300'].value == 'DVD', '1 videodisc : $bsound, color ; $c 4 3/4 in.', \nif(\ncells['Master Format for 300'].value == 'Hi-8', '1 videocassette : $bsound, color ; $c 8 mm', \nif(\ncells['Master Format for 300'].value == 'miniDV', '1 videocassette : $bsound, color ; $c 1/4 in.', \nif(\ncells['Master Format for 300'].value == 'DVCAM', '1 videocassette : $bsound, color ; $c 1/4 in.', null)\n)))), \nvalue)"
   },
   {
     "op": "core/column-addition",
