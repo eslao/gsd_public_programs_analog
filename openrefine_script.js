@@ -252,11 +252,11 @@
       "mode": "row-based"
     },
     "baseColumnName": "year",
-    "expression": "grel:\"Cambridge, Mass.:\" + \"$$b Harvard University Graduate School of Design,\" + \"$$c\" + \n(if (value == 1900, \"[date of publication not identified]\", value))",
+    "expression": "grel:\"Cambridge, Mass.:\" + \"$b Harvard University Graduate School of Design,\" + \"$c\" + \n(if (value == 1900, \"[date of publication not identified]\", value))",
     "onError": "set-to-blank",
     "newColumnName": "05: 264 production",
     "columnInsertIndex": 11,
-    "description": "Create column 05: 264 production at index 11 based on column year using expression grel:\"Cambridge, Mass.:\" + \"$$b Harvard University Graduate School of Design,\" + \"$$c\" + \n(if (value == 1900, \"[date of publication not identified]\", value))"
+    "description": "Create column 05: 264 production at index 11 based on column year using expression grel:\"Cambridge, Mass.:\" + \"$b Harvard University Graduate School of Design,\" + \"$c\" + \n(if (value == 1900, \"[date of publication not identified]\", value))"
   },
   {
     "op": "core/column-move",
@@ -357,11 +357,11 @@
       "mode": "row-based"
     },
     "baseColumnName": "Event Type",
-    "expression": "grel:\"Harvard University.$$bGraduate School of Design$$1http://www.wikidata.org/entity/Q3128016\"",
+    "expression": "grel:\"Harvard University.$bGraduate School of Design$1http://www.wikidata.org/entity/Q3128016\"",
     "onError": "set-to-blank",
     "newColumnName": "08: 710 corporate name",
     "columnInsertIndex": 41,
-    "description": "Create column 08: 710 corporate name at index 41 based on column Event Type using expression grel:\"Harvard University.$$bGraduate School of Design$$1http://www.wikidata.org/entity/Q3128016\""
+    "description": "Create column 08: 710 corporate name at index 41 based on column Event Type using expression grel:\"Harvard University.$bGraduate School of Design$1http://www.wikidata.org/entity/Q3128016\""
   },
   {
     "op": "core/column-move",
@@ -473,11 +473,11 @@
       "mode": "row-based"
     },
     "baseColumnName": "Copy Format",
-    "expression": "grel:if(\nvalue == 'VHS', '1 videocassette : $$bsound, color ; $$b1/2 in.',\nif(value == 'DVD', '1 videodisc : $$bsound, color ; $$b 4 3/4 in.', null))",
+    "expression": "grel:if(\nvalue == 'VHS', '1 videocassette : $bsound, color ; $b1/2 in.',\nif(value == 'DVD', '1 videodisc : $bsound, color ; $b 4 3/4 in.', null))",
     "onError": "set-to-blank",
     "newColumnName": "06: 300 extent and physical details of copy",
     "columnInsertIndex": 21,
-    "description": "Create column 06: 300 extent and physical details of copy at index 21 based on column Copy Format using expression grel:if(\nvalue == 'VHS', '1 videocassette : $$bsound, color ; $$b1/2 in.',\nif(value == 'DVD', '1 videodisc : $$bsound, color ; $$b 4 3/4 in.', null))"
+    "description": "Create column 06: 300 extent and physical details of copy at index 21 based on column Copy Format using expression grel:if(\nvalue == 'VHS', '1 videocassette : $bsound, color ; $b1/2 in.',\nif(value == 'DVD', '1 videodisc : $bsound, color ; $b 4 3/4 in.', null))"
   },
   {
     "op": "core/row-removal",
@@ -562,11 +562,11 @@
       "mode": "row-based"
     },
     "baseColumnName": "Event Type",
-    "expression": "grel:if(toLowercase(value).contains('lecture'), 'Lectures. $$2 lcgft', if(toLowercase(value).contains('conference'), 'Conferences papers and proceedings. $$2 lcgft', if(toLowercase(value).contains('discussion'), 'Panel discussions. $$2 lcgft', \nif(toLowercase(value).contains('colloqui'), 'colloquiums. $$2 aat', \nif(toLowercase(value).contains('symposi'), 'Panel discussions. $$2 lcgft', \nif(toLowercase(value).contains('interview'), 'Interviews. $$2 lcgft', if(toLowercase(value).contains('lecture'), 'Lectures. $$2 lcgft', if(toLowercase(value).contains('commencement'), 'Graduation speeches. $$2 lcgft', null)\n)\n)\n)\n)\n)\n)\n)",
+    "expression": "grel:if(toLowercase(value).contains('lecture'), 'Lectures. $2 lcgft', if(toLowercase(value).contains('conference'), 'Conferences papers and proceedings. $2 lcgft', if(toLowercase(value).contains('discussion'), 'Panel discussions. $2 lcgft', \nif(toLowercase(value).contains('colloqui'), 'colloquiums. $2 aat', \nif(toLowercase(value).contains('symposi'), 'Panel discussions. $2 lcgft', \nif(toLowercase(value).contains('interview'), 'Interviews. $2 lcgft', if(toLowercase(value).contains('lecture'), 'Lectures. $2 lcgft', if(toLowercase(value).contains('commencement'), 'Graduation speeches. $2 lcgft', null)\n)\n)\n)\n)\n)\n)\n)",
     "onError": "set-to-blank",
     "newColumnName": "10: 655 genre",
     "columnInsertIndex": 9,
-    "description": "Create column 10: 655 genre at index 9 based on column Event Type using expression grel:if(toLowercase(value).contains('lecture'), 'Lectures. $$2 lcgft', if(toLowercase(value).contains('conference'), 'Conferences papers and proceedings. $$2 lcgft', if(toLowercase(value).contains('discussion'), 'Panel discussions. $$2 lcgft', \nif(toLowercase(value).contains('colloqui'), 'colloquiums. $$2 aat', \nif(toLowercase(value).contains('symposi'), 'Panel discussions. $$2 lcgft', \nif(toLowercase(value).contains('interview'), 'Interviews. $$2 lcgft', if(toLowercase(value).contains('lecture'), 'Lectures. $$2 lcgft', if(toLowercase(value).contains('commencement'), 'Graduation speeches. $$2 lcgft', null)\n)\n)\n)\n)\n)\n)\n)"
+    "description": "Create column 10: 655 genre at index 9 based on column Event Type using expression grel:if(toLowercase(value).contains('lecture'), 'Lectures. $2 lcgft', if(toLowercase(value).contains('conference'), 'Conferences papers and proceedings. $2 lcgft', if(toLowercase(value).contains('discussion'), 'Panel discussions. $2 lcgft', \nif(toLowercase(value).contains('colloqui'), 'colloquiums. $2 aat', \nif(toLowercase(value).contains('symposi'), 'Panel discussions. $2 lcgft', \nif(toLowercase(value).contains('interview'), 'Interviews. $2 lcgft', if(toLowercase(value).contains('lecture'), 'Lectures. $2 lcgft', if(toLowercase(value).contains('commencement'), 'Graduation speeches. $2 lcgft', null)\n)\n)\n)\n)\n)\n)\n)"
   },
   {
     "op": "core/column-addition",
@@ -575,11 +575,11 @@
       "mode": "row-based"
     },
     "baseColumnName": "Lecturers and moderators 1",
-    "expression": "grel:value.replace(\"[\", \"$$4http://id.loc.gov/vocabulary/relators/\").replace(\"]\",\"\")",
+    "expression": "grel:value.replace(\"[\", \"$4http://id.loc.gov/vocabulary/relators/\").replace(\"]\",\"\")",
     "onError": "set-to-blank",
     "newColumnName": "11: 700 speaker",
     "columnInsertIndex": 10,
-    "description": "Create column 11: 700 speaker at index 10 based on column Lecturers and moderators 1 using expression grel:value.replace(\"[\", \"$$4http://id.loc.gov/vocabulary/relators/\").replace(\"]\",\"\")"
+    "description": "Create column 11: 700 speaker at index 10 based on column Lecturers and moderators 1 using expression grel:value.replace(\"[\", \"$4http://id.loc.gov/vocabulary/relators/\").replace(\"]\",\"\")"
   },
   {
     "op": "core/column-addition",
@@ -588,11 +588,11 @@
       "mode": "row-based"
     },
     "baseColumnName": "Lecturers and moderators 2",
-    "expression": "grel:trim(value).replace(\"[\", \"$$4http://id.loc.gov/vocabulary/relators/\").replace(\"]\",\"\")",
+    "expression": "grel:trim(value).replace(\"[\", \"$4http://id.loc.gov/vocabulary/relators/\").replace(\"]\",\"\")",
     "onError": "set-to-blank",
     "newColumnName": "12: 700 speaker",
     "columnInsertIndex": 29,
-    "description": "Create column 12: 700 speaker at index 29 based on column Lecturers and moderators 2 using expression grel:trim(value).replace(\"[\", \"$$4http://id.loc.gov/vocabulary/relators/\").replace(\"]\",\"\")"
+    "description": "Create column 12: 700 speaker at index 29 based on column Lecturers and moderators 2 using expression grel:trim(value).replace(\"[\", \"$4http://id.loc.gov/vocabulary/relators/\").replace(\"]\",\"\")"
   },
   {
     "op": "core/column-move",
@@ -673,11 +673,11 @@
       "mode": "record-based"
     },
     "columnName": "01: 100 Lecturer",
-    "expression": "grel:value + \"$$4http://id.loc.gov/vocabulary/relators/\" + cells[\"02: 100 relator\"].value",
+    "expression": "grel:value + \"$4http://id.loc.gov/vocabulary/relators/\" + cells[\"02: 100 relator\"].value",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Text transform on cells in column 01: 100 Lecturer using expression grel:value + \"$$4http://id.loc.gov/vocabulary/relators/\" + cells[\"02: 100 relator\"].value"
+    "description": "Text transform on cells in column 01: 100 Lecturer using expression grel:value + \"$4http://id.loc.gov/vocabulary/relators/\" + cells[\"02: 100 relator\"].value"
   },
   {
     "op": "core/column-move",
@@ -762,11 +762,11 @@
       "mode": "record-based"
     },
     "columnName": "01: 100 Lecturer",
-    "expression": "grel:value .replace(' $$4', '$$4') .replace('$$4http://id.loc.gov/vocabulary/relators/spk', ', $$espeaker. $$4http://id.loc.gov/vocabulary/relators/spk') .replace('$$4http://id.loc.gov/vocabulary/relators/pan', ', $$epanelist. $$4http://id.loc.gov/vocabulary/relators/pan') .replace('$$4http://id.loc.gov/vocabulary/relators/mod', ', $$emoderator. $$4http://id.loc.gov/vocabulary/relators/mod')",
+    "expression": "grel:value .replace(' $4', '$4') .replace('$4http://id.loc.gov/vocabulary/relators/spk', ', $espeaker. $4http://id.loc.gov/vocabulary/relators/spk') .replace('$4http://id.loc.gov/vocabulary/relators/pan', ', $epanelist. $4http://id.loc.gov/vocabulary/relators/pan') .replace('$4http://id.loc.gov/vocabulary/relators/mod', ', $emoderator. $4http://id.loc.gov/vocabulary/relators/mod')",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Text transform on cells in column 01: 100 Lecturer using expression grel:value .replace(' $$4', '$$4') .replace('$$4http://id.loc.gov/vocabulary/relators/spk', ', $$espeaker. $$4http://id.loc.gov/vocabulary/relators/spk') .replace('$$4http://id.loc.gov/vocabulary/relators/pan', ', $$epanelist. $$4http://id.loc.gov/vocabulary/relators/pan') .replace('$$4http://id.loc.gov/vocabulary/relators/mod', ', $$emoderator. $$4http://id.loc.gov/vocabulary/relators/mod')"
+    "description": "Text transform on cells in column 01: 100 Lecturer using expression grel:value .replace(' $4', '$4') .replace('$4http://id.loc.gov/vocabulary/relators/spk', ', $espeaker. $4http://id.loc.gov/vocabulary/relators/spk') .replace('$4http://id.loc.gov/vocabulary/relators/pan', ', $epanelist. $4http://id.loc.gov/vocabulary/relators/pan') .replace('$4http://id.loc.gov/vocabulary/relators/mod', ', $emoderator. $4http://id.loc.gov/vocabulary/relators/mod')"
   },
   {
     "op": "core/text-transform",
@@ -775,11 +775,11 @@
       "mode": "record-based"
     },
     "columnName": "11: 700 speaker",
-    "expression": "grel:value .replace(' $$4', '$$4') .replace('$$4http://id.loc.gov/vocabulary/relators/spk', ', $$espeaker. $$4http://id.loc.gov/vocabulary/relators/spk') .replace('$$4http://id.loc.gov/vocabulary/relators/pan', ', $$epanelist. $$4http://id.loc.gov/vocabulary/relators/pan') .replace('$$4http://id.loc.gov/vocabulary/relators/mod', ', $$emoderator. $$4http://id.loc.gov/vocabulary/relators/mod')",
+    "expression": "grel:value .replace(' $4', '$4') .replace('$4http://id.loc.gov/vocabulary/relators/spk', ', $espeaker. $4http://id.loc.gov/vocabulary/relators/spk') .replace('$4http://id.loc.gov/vocabulary/relators/pan', ', $epanelist. $4http://id.loc.gov/vocabulary/relators/pan') .replace('$4http://id.loc.gov/vocabulary/relators/mod', ', $emoderator. $4http://id.loc.gov/vocabulary/relators/mod')",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Text transform on cells in column 11: 700 speaker using expression grel:value .replace(' $$4', '$$4') .replace('$$4http://id.loc.gov/vocabulary/relators/spk', ', $$espeaker. $$4http://id.loc.gov/vocabulary/relators/spk') .replace('$$4http://id.loc.gov/vocabulary/relators/pan', ', $$epanelist. $$4http://id.loc.gov/vocabulary/relators/pan') .replace('$$4http://id.loc.gov/vocabulary/relators/mod', ', $$emoderator. $$4http://id.loc.gov/vocabulary/relators/mod')"
+    "description": "Text transform on cells in column 11: 700 speaker using expression grel:value .replace(' $4', '$4') .replace('$4http://id.loc.gov/vocabulary/relators/spk', ', $espeaker. $4http://id.loc.gov/vocabulary/relators/spk') .replace('$4http://id.loc.gov/vocabulary/relators/pan', ', $epanelist. $4http://id.loc.gov/vocabulary/relators/pan') .replace('$4http://id.loc.gov/vocabulary/relators/mod', ', $emoderator. $4http://id.loc.gov/vocabulary/relators/mod')"
   },
   {
     "op": "core/text-transform",
@@ -788,11 +788,11 @@
       "mode": "record-based"
     },
     "columnName": "12: 700 speaker",
-    "expression": "grel:value .replace(' $$4', '$$4') .replace('$$4http://id.loc.gov/vocabulary/relators/spk', ', $$espeaker. $$4http://id.loc.gov/vocabulary/relators/spk') .replace('$$4http://id.loc.gov/vocabulary/relators/pan', ', $$epanelist. $$4http://id.loc.gov/vocabulary/relators/pan') .replace('$$4http://id.loc.gov/vocabulary/relators/mod', ', $$emoderator. $$4http://id.loc.gov/vocabulary/relators/mod')",
+    "expression": "grel:value .replace(' $4', '$4') .replace('$4http://id.loc.gov/vocabulary/relators/spk', ', $espeaker. $4http://id.loc.gov/vocabulary/relators/spk') .replace('$4http://id.loc.gov/vocabulary/relators/pan', ', $epanelist. $4http://id.loc.gov/vocabulary/relators/pan') .replace('$4http://id.loc.gov/vocabulary/relators/mod', ', $emoderator. $4http://id.loc.gov/vocabulary/relators/mod')",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Text transform on cells in column 12: 700 speaker using expression grel:value .replace(' $$4', '$$4') .replace('$$4http://id.loc.gov/vocabulary/relators/spk', ', $$espeaker. $$4http://id.loc.gov/vocabulary/relators/spk') .replace('$$4http://id.loc.gov/vocabulary/relators/pan', ', $$epanelist. $$4http://id.loc.gov/vocabulary/relators/pan') .replace('$$4http://id.loc.gov/vocabulary/relators/mod', ', $$emoderator. $$4http://id.loc.gov/vocabulary/relators/mod')"
+    "description": "Text transform on cells in column 12: 700 speaker using expression grel:value .replace(' $4', '$4') .replace('$4http://id.loc.gov/vocabulary/relators/spk', ', $espeaker. $4http://id.loc.gov/vocabulary/relators/spk') .replace('$4http://id.loc.gov/vocabulary/relators/pan', ', $epanelist. $4http://id.loc.gov/vocabulary/relators/pan') .replace('$4http://id.loc.gov/vocabulary/relators/mod', ', $emoderator. $4http://id.loc.gov/vocabulary/relators/mod')"
   },
   {
     "op": "core/text-transform",
@@ -801,11 +801,11 @@
       "mode": "record-based"
     },
     "columnName": "04: 245a Lecture title 0",
-    "expression": "grel:value\n.replace(', Tape', '. Tape').replace('. Tape', '. $$nTape')\n.replace(', Session', '. Session').replace('. Session', '. $$nSession')\n.replace(', Part', '. Part').replace('. Part', '. $$nPart')",
+    "expression": "grel:value\n.replace(', Tape', '. Tape').replace('. Tape', '. $nTape')\n.replace(', Session', '. Session').replace('. Session', '. $nSession')\n.replace(', Part', '. Part').replace('. Part', '. $nPart')",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Text transform on cells in column 04: 245a Lecture title 0 using expression grel:value\n.replace(', Tape', '. Tape').replace('. Tape', '. $$nTape')\n.replace(', Session', '. Session').replace('. Session', '. $$nSession')\n.replace(', Part', '. Part').replace('. Part', '. $$nPart')"
+    "description": "Text transform on cells in column 04: 245a Lecture title 0 using expression grel:value\n.replace(', Tape', '. Tape').replace('. Tape', '. $nTape')\n.replace(', Session', '. Session').replace('. Session', '. $nSession')\n.replace(', Part', '. Part').replace('. Part', '. $nPart')"
   },
   {
     "op": "core/text-transform",
@@ -814,11 +814,11 @@
       "mode": "record-based"
     },
     "columnName": "04: 245a Lecture title 1",
-    "expression": "grel:value\n.replace(', Tape', '. Tape').replace('. Tape', '. $$nTape')\n.replace(', Session', '. Session').replace('. Session', '. $$nSession')\n.replace(', Part', '. Part').replace('. Part', '. $$nPart')",
+    "expression": "grel:value\n.replace(', Tape', '. Tape').replace('. Tape', '. $nTape')\n.replace(', Session', '. Session').replace('. Session', '. $nSession')\n.replace(', Part', '. Part').replace('. Part', '. $nPart')",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Text transform on cells in column 04: 245a Lecture title 1 using expression grel:value\n.replace(', Tape', '. Tape').replace('. Tape', '. $$nTape')\n.replace(', Session', '. Session').replace('. Session', '. $$nSession')\n.replace(', Part', '. Part').replace('. Part', '. $$nPart')"
+    "description": "Text transform on cells in column 04: 245a Lecture title 1 using expression grel:value\n.replace(', Tape', '. Tape').replace('. Tape', '. $nTape')\n.replace(', Session', '. Session').replace('. Session', '. $nSession')\n.replace(', Part', '. Part').replace('. Part', '. $nPart')"
   },
   {
     "op": "core/text-transform",
@@ -866,11 +866,11 @@
       "mode": "record-based"
     },
     "baseColumnName": "12: 700 speaker",
-    "expression": "grel:'Harvard University. $$b Graduate School of Design. $$t GSD Public Programs.'",
+    "expression": "grel:'Harvard University. $b Graduate School of Design. $t GSD Public Programs.'",
     "onError": "set-to-blank",
     "newColumnName": "13: 810 series/corporate name",
     "columnInsertIndex": 12,
-    "description": "Create column 13: 810 series/corporate name at index 12 based on column 12: 700 speaker using expression grel:'Harvard University. $$b Graduate School of Design. $$t GSD Public Programs.'"
+    "description": "Create column 13: 810 series/corporate name at index 12 based on column 12: 700 speaker using expression grel:'Harvard University. $b Graduate School of Design. $t GSD Public Programs.'"
   },
   {
     "op": "core/column-addition",
@@ -972,11 +972,11 @@
       "mode": "record-based"
     },
     "columnName": "06: 300 extent and physical details of copy",
-    "expression": "grel:if(value == null, \nif(\ncells['Master Format for 300'].value == 'VHS', '1 videocassette : $$bsound, color ; $$b1/2 in.', \nif(\ncells['Master Format for 300'].value == 'DVD', '1 videodisc : $$bsound, color ; $$b 4 3/4 in.', \nif(\ncells['Master Format for 300'].value == 'Hi-8', '1 videocassette : $$bsound, color ; $$b8 mm', \nif(\ncells['Master Format for 300'].value == 'miniDV', '1 videocassette : $$bsound, color ; $$b1/4 in.', \nif(\ncells['Master Format for 300'].value == 'DVCAM', '1 videocassette : $$bsound, color ; $$b1/4 in.', null)\n)))), \nvalue)",
+    "expression": "grel:if(value == null, \nif(\ncells['Master Format for 300'].value == 'VHS', '1 videocassette : $bsound, color ; $b1/2 in.', \nif(\ncells['Master Format for 300'].value == 'DVD', '1 videodisc : $bsound, color ; $b 4 3/4 in.', \nif(\ncells['Master Format for 300'].value == 'Hi-8', '1 videocassette : $bsound, color ; $b8 mm', \nif(\ncells['Master Format for 300'].value == 'miniDV', '1 videocassette : $bsound, color ; $b1/4 in.', \nif(\ncells['Master Format for 300'].value == 'DVCAM', '1 videocassette : $bsound, color ; $b1/4 in.', null)\n)))), \nvalue)",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Text transform on cells in column 06: 300 extent and physical details of copy using expression grel:if(value == null, \nif(\ncells['Master Format for 300'].value == 'VHS', '1 videocassette : $$bsound, color ; $$b1/2 in.', \nif(\ncells['Master Format for 300'].value == 'DVD', '1 videodisc : $$bsound, color ; $$b 4 3/4 in.', \nif(\ncells['Master Format for 300'].value == 'Hi-8', '1 videocassette : $$bsound, color ; $$b8 mm', \nif(\ncells['Master Format for 300'].value == 'miniDV', '1 videocassette : $$bsound, color ; $$b1/4 in.', \nif(\ncells['Master Format for 300'].value == 'DVCAM', '1 videocassette : $$bsound, color ; $$b1/4 in.', null)\n)))), \nvalue)"
+    "description": "Text transform on cells in column 06: 300 extent and physical details of copy using expression grel:if(value == null, \nif(\ncells['Master Format for 300'].value == 'VHS', '1 videocassette : $bsound, color ; $b1/2 in.', \nif(\ncells['Master Format for 300'].value == 'DVD', '1 videodisc : $bsound, color ; $b 4 3/4 in.', \nif(\ncells['Master Format for 300'].value == 'Hi-8', '1 videocassette : $bsound, color ; $b8 mm', \nif(\ncells['Master Format for 300'].value == 'miniDV', '1 videocassette : $bsound, color ; $b1/4 in.', \nif(\ncells['Master Format for 300'].value == 'DVCAM', '1 videocassette : $bsound, color ; $b1/4 in.', null)\n)))), \nvalue)"
   },
   {
     "op": "core/column-addition",
