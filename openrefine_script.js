@@ -1262,5 +1262,31 @@
     "newColumnName": "17: 506 note",
     "columnInsertIndex": 16,
     "description": "Create column 17: 506 note at index 16 based on column 16: 007 using expression grel:\"Playback of this recording’s audiovisual format is limited.  Requests to view recordings will be reviewed by library staff for possible digitization to provide streaming access.\""
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "EDGE CASE",
+          "expression": "value",
+          "columnName": "EDGE CASE",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "EDGE CASE",
+    "description": "Remove column EDGE CASE"
   }
 ]
