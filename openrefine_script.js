@@ -1107,5 +1107,147 @@
     "repeat": false,
     "repeatCount": 10,
     "description": "Text transform on cells in column Master Format using expression grel:value.trim()"
-  }
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Copy Format",
+    "expression": "grel:value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Copy Format using expression grel:value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Master Format",
+    "expression": "grel:value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Master Format using expression grel:value.trim()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Tape No. (MASTER)",
+          "expression": "value",
+          "columnName": "Tape No. (MASTER)",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Copy Format",
+    "expression": "grel:value.replace('VHS', 'vf|cbaho|').replace('DVD', 'vd|cvaiz|')",
+    "onError": "set-to-blank",
+    "newColumnName": "16: 007",
+    "columnInsertIndex": 30,
+    "description": "Create column 16: 007 at index 30 based on column Copy Format using expression grel:value.replace('VHS', 'vf|cbaho|').replace('DVD', 'vd|cvaiz|')"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "16: 007",
+    "index": 29,
+    "description": "Move column 16: 007 to position 29"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "16: 007",
+    "index": 28,
+    "description": "Move column 16: 007 to position 28"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "16: 007",
+    "index": 27,
+    "description": "Move column 16: 007 to position 27"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "16: 007",
+    "index": 26,
+    "description": "Move column 16: 007 to position 26"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "16: 007",
+    "index": 25,
+    "description": "Move column 16: 007 to position 25"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "16: 007",
+    "index": 24,
+    "description": "Move column 16: 007 to position 24"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "16: 007",
+    "index": 23,
+    "description": "Move column 16: 007 to position 23"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "16: 007",
+    "index": 22,
+    "description": "Move column 16: 007 to position 22"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "16: 007",
+    "index": 21,
+    "description": "Move column 16: 007 to position 21"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "16: 007",
+    "index": 20,
+    "description": "Move column 16: 007 to position 20"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "16: 007",
+    "index": 19,
+    "description": "Move column 16: 007 to position 19"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "16: 007",
+    "index": 18,
+    "description": "Move column 16: 007 to position 18"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "16: 007",
+    "index": 17,
+    "description": "Move column 16: 007 to position 17"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "16: 007",
+    "index": 16,
+    "description": "Move column 16: 007 to position 16"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "16: 007",
+    "index": 15,
+    "description": "Move column 16: 007 to position 15"
+  } 
 ]
