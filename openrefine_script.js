@@ -1249,5 +1249,18 @@
     "columnName": "16: 007",
     "index": 15,
     "description": "Move column 16: 007 to position 15"
-  } 
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "16: 007",
+    "expression": "grel:\"Playback of this recording’s audiovisual format is limited.  Requests to view recordings will be reviewed by library staff for possible digitization to provide streaming access.\"",
+    "onError": "set-to-blank",
+    "newColumnName": "17: 506 note",
+    "columnInsertIndex": 16,
+    "description": "Create column 17: 506 note at index 16 based on column 16: 007 using expression grel:\"Playback of this recording’s audiovisual format is limited.  Requests to view recordings will be reviewed by library staff for possible digitization to provide streaming access.\""
+  }
 ]
